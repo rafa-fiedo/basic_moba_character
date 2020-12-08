@@ -19,6 +19,10 @@ config/name="Moba character"
 run/main_scene="res://scenes/levels/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Mouse="*res://autoloads/Mouse.tscn"
+
 [display]
 
 window/size/width=640
