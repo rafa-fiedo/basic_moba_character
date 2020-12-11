@@ -5,8 +5,10 @@
 
 [node name="Level1" type="Node2D"]
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 243, 187 )
+[node name="YSort" type="YSort" parent="."]
 
-[node name="Enemy" parent="." instance=ExtResource( 2 )]
+[node name="Enemy" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 319, 110 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 243, 187 )
