@@ -10,5 +10,17 @@
 [node name="Enemy" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 319, 110 )
 
+[node name="Enemy2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 353, 156 )
+
+[node name="Enemy3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 267, 111 )
+
+[node name="Enemy4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 371, 131 )
+
+[node name="Enemy5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 212, 107 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 243, 187 )
