@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/sprites/Enemy.png" type="Texture" id=1]
 [ext_resource path="res://scenes/characters/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://scenes/ui/HPBar.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 3 )
@@ -30,5 +31,9 @@ shape = SubResource( 1 )
 modulate = Color( 0.00784314, 0.113725, 0.964706, 1 )
 position = Vector2( 0, -11 )
 shape = SubResource( 2 )
+
+[node name="HPBar" parent="." instance=ExtResource( 3 )]
+margin_top = -43.0
+margin_bottom = -3.0
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]
