@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Mouse="*res://autoloads/Mouse.tscn"
+HUD="*res://autoloads/HUD.tscn"
 
 [display]
 

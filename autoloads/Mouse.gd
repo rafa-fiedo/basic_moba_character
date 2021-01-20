@@ -1,7 +1,8 @@
-extends Node2D
+extends CanvasLayer
 
 # reference to danger/safety body like enemies or items
 var target_body = null
+var can_player_move = true
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -11,7 +12,7 @@ func play_danger(body):
 	$AnimationPlayer.play("Danger")	
 	target_body = body
 
-func play_safety(body):
+func play_safety(body=null):
 	$AnimationPlayer.play("Safety")
 	target_body = body
 
@@ -23,4 +24,4 @@ func is_danger():
 	return $AnimationPlayer.current_animation == "Danger"
 
 func _process(delta):
-	global_position = get_viewport().get_mouse_position()
+	$Sprite.position = get_viewport().get_mouse_position()

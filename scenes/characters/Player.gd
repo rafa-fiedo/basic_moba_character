@@ -11,8 +11,8 @@ var attack_range = 20
 var player_damage = 40
 
 func _input(event):
-	if event.is_action_pressed("game_move"):
-		last_mouse_pos = get_viewport().get_mouse_position()
+	if event.is_action_pressed("game_move") and Mouse.can_player_move:
+		last_mouse_pos = get_global_mouse_position()
 		target_body_clicked = Mouse.target_body
 		
 		if Mouse.is_danger():
