@@ -10,6 +10,9 @@ var attack_range = 20
 
 var player_damage = 40
 
+func _ready():
+	HUD.player_node = self
+
 func _input(event):
 	if event.is_action_pressed("game_move") and Mouse.can_player_move:
 		last_mouse_pos = get_global_mouse_position()
@@ -63,3 +66,15 @@ func attack():
 	else:
 		$AnimationPlayer.play("AttackSide")
 		$Sprite.flip_h = attack_direction.x < 0
+		
+func use_teleport_effect():
+	var teleport_scene = load("res://scenes/items/TeleportEffect.tscn")
+	var teleport_instance = teleport_scene.instance()
+	teleport_instance.global_position = global_position
+	get_tree().current_scene.add_child(teleport_instance)
+		
+func use_blink_dagger():
+	var item_packed_scene = load("res://scenes/items/BlinkDagger.tscn")
+	var item_instance = item_packed_scene.instance()
+	
+	add_child(item_instance)

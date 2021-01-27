@@ -1,8 +1,10 @@
 extends CanvasLayer
 
+var player_node = null
 
 func _on_Item_pressed():
-	print("use this item!")
+	if player_node:
+		player_node.use_blink_dagger()
 
 func _on_Item_mouse_entered():
 	Mouse.play_safety()
